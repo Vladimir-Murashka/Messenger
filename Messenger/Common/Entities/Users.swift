@@ -9,8 +9,8 @@ import Moya
 
 enum Users {
     case sendAuthCode(request: SendAuthCodeRequest)
-    case checkAuthCode
-    case register
+    case checkAuthCode(request: CheckAuthCodeRequest)
+    case register(request: RegisterRequest)
     case getUser
     case updateUser
     case refreshToken
@@ -59,6 +59,10 @@ extension Users: AuthorizedTargetType {
              .checkJWT:
             return .requestPlain
         case let .sendAuthCode(request):
+            return .requestWithBodyParameters(from: request)
+        case let .checkAuthCode(request: request):
+            return .requestWithBodyParameters(from: request)
+        case let .register(request: request):
             return .requestWithBodyParameters(from: request)
         default:
             return .requestCompositeParameters(

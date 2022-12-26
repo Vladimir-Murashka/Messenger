@@ -13,7 +13,7 @@ final class AppDIContainer {
     }
 
     convenience init() {
-        let keychainManager = KeychainManger()
+        let keychainManager = KeychainManager()
         let decoderManager = DecoderManager()
         let networkManager = NetworkManager(tokensStorage: keychainManager)
         let apiManager = APIManager(networkManager: networkManager, decoderManager: decoderManager)
@@ -23,5 +23,9 @@ final class AppDIContainer {
 }
 
 extension AppDIContainer {
-    func makeAuthFlowCoordinator(router: Router) -> CoordinatorOutput {}
+    func makeAuthFlowCoordinator(router: Router) -> CoordinatorOutput {
+        let dependencies = AuthModuleDependencies(apiManager: apiManager)
+
+        return AuthModule(dependencies: dependencies).makeAuthFlowCoordinator(router: router)
+    }
 }
