@@ -18,9 +18,9 @@ protocol Keychainangerable {
     func remove(for key: KeychainKey)
 }
 
-final class KeychainManger {}
+final class KeychainManager {}
 
-extension KeychainManger: Keychainangerable {
+extension KeychainManager: Keychainangerable {
     func save(_ string: String, for key: KeychainKey) {}
     func fetch(for key: KeychainKey) -> String { "" }
     func remove(for key: KeychainKey) {}
@@ -31,7 +31,7 @@ protocol TokensStorage {
     var refreshToken: String { get }
 }
 
-extension KeychainManger: TokensStorage {
+extension KeychainManager: TokensStorage {
     var accessToken: String {
         fetch(for: .accessToken)
     }

@@ -19,7 +19,7 @@
 		224B08F82958DEE3000D0CF4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08F72958DEE3000D0CF4 /* Encodable.swift */; };
 		224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08F92958E374000D0CF4 /* NetworkManager.swift */; };
 		224B08FC2958E39D000D0CF4 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FB2958E39D000D0CF4 /* AuthPlugin.swift */; };
-		224B08FE2958E3D5000D0CF4 /* KeychainManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FD2958E3D5000D0CF4 /* KeychainManger.swift */; };
+		224B08FE2958E3D5000D0CF4 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FD2958E3D5000D0CF4 /* KeychainManager.swift */; };
 		224B09002958E400000D0CF4 /* DecoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FF2958E400000D0CF4 /* DecoderManager.swift */; };
 		224B09022958E431000D0CF4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09012958E431000D0CF4 /* APIManager.swift */; };
 		224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09042958E520000D0CF4 /* ErrorResponse.swift */; };
@@ -31,6 +31,43 @@
 		22D1136A2959C13E0094F2A6 /* CoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113692959C13E0094F2A6 /* CoordinatorOutput.swift */; };
 		22D1136C2959C1500094F2A6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1136B2959C1500094F2A6 /* Coordinator.swift */; };
 		22D1136E2959C1620094F2A6 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1136D2959C1620094F2A6 /* NavigationRouter.swift */; };
+		22D113732959DC5A0094F2A6 /* AuthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113722959DC5A0094F2A6 /* AuthModule.swift */; };
+		22D113752959DC700094F2A6 /* AuthDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113742959DC700094F2A6 /* AuthDIContainer.swift */; };
+		22D113782959DCC60094F2A6 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113772959DCC60094F2A6 /* AuthCoordinator.swift */; };
+		22D113822959DDF30094F2A6 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113812959DDF30094F2A6 /* AuthAssembly.swift */; };
+		22D113842959DE0E0094F2A6 /* AuthRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113832959DE0E0094F2A6 /* AuthRouterInput.swift */; };
+		22D113862959DE3C0094F2A6 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113852959DE3C0094F2A6 /* AuthInteractor.swift */; };
+		22D113882959DE530094F2A6 /* AuthInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113872959DE530094F2A6 /* AuthInteractorInput.swift */; };
+		22D1138A2959DE6F0094F2A6 /* AuthInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113892959DE6F0094F2A6 /* AuthInteractorOutput.swift */; };
+		22D1138E2959DE9B0094F2A6 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1138D2959DE9B0094F2A6 /* AuthPresenter.swift */; };
+		22D113902959DEB00094F2A6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1138F2959DEB00094F2A6 /* AuthViewController.swift */; };
+		22D113922959DEBD0094F2A6 /* AuthViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113912959DEBD0094F2A6 /* AuthViewInput.swift */; };
+		22D113942959DEC80094F2A6 /* AuthViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113932959DEC80094F2A6 /* AuthViewOutput.swift */; };
+		22D113962959DED30094F2A6 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113952959DED30094F2A6 /* AuthView.swift */; };
+		22D1139E2959E5ED0094F2A6 /* CheckCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1139D2959E5ED0094F2A6 /* CheckCodeViewController.swift */; };
+		22D113A02959E61D0094F2A6 /* CheckCodeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1139F2959E61D0094F2A6 /* CheckCodeViewInput.swift */; };
+		22D113A22959E6340094F2A6 /* CheckCodeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113A12959E6340094F2A6 /* CheckCodeViewOutput.swift */; };
+		22D113A42959E6410094F2A6 /* CheckCodeVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113A32959E6410094F2A6 /* CheckCodeVIew.swift */; };
+		22D113A62959E6930094F2A6 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113A52959E6930094F2A6 /* CheckCodePresenter.swift */; };
+		22D113A82959E6A40094F2A6 /* CheckCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113A72959E6A40094F2A6 /* CheckCodeInteractor.swift */; };
+		22D113AA2959E6BD0094F2A6 /* CheckCodeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113A92959E6BD0094F2A6 /* CheckCodeInteractorInput.swift */; };
+		22D113AC2959E6CF0094F2A6 /* CheckCodeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113AB2959E6CF0094F2A6 /* CheckCodeInteractorOutput.swift */; };
+		22D113AE2959E6FD0094F2A6 /* CheckCodeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113AD2959E6FD0094F2A6 /* CheckCodeRouterInput.swift */; };
+		22D113B02959E7160094F2A6 /* CheckCodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113AF2959E7160094F2A6 /* CheckCodeAssembly.swift */; };
+		22D113B22959E9A10094F2A6 /* CheckAuthCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113B12959E9A10094F2A6 /* CheckAuthCodeRequest.swift */; };
+		22D113B42959E9B50094F2A6 /* CheckAuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113B32959E9B50094F2A6 /* CheckAuthCodeResponse.swift */; };
+		22D113BC295A44520094F2A6 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113BB295A44520094F2A6 /* RegisterRequest.swift */; };
+		22D113BE295A446C0094F2A6 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113BD295A446B0094F2A6 /* RegisterResponse.swift */; };
+		22D113C0295A456C0094F2A6 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113BF295A456C0094F2A6 /* RegisterAssembly.swift */; };
+		22D113C2295A45CA0094F2A6 /* RegisterRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113C1295A45CA0094F2A6 /* RegisterRouterInput.swift */; };
+		22D113C4295A45F80094F2A6 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113C3295A45F80094F2A6 /* RegisterInteractor.swift */; };
+		22D113C6295A46100094F2A6 /* RegisterInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113C5295A46100094F2A6 /* RegisterInteractorInput.swift */; };
+		22D113C8295A46220094F2A6 /* RegisterInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113C7295A46220094F2A6 /* RegisterInteractorOutput.swift */; };
+		22D113CA295A482B0094F2A6 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113C9295A482B0094F2A6 /* RegisterPresenter.swift */; };
+		22D113CC295A49310094F2A6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113CB295A49310094F2A6 /* RegisterViewController.swift */; };
+		22D113CE295A49400094F2A6 /* RegisterViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113CD295A49400094F2A6 /* RegisterViewInput.swift */; };
+		22D113D0295A494E0094F2A6 /* RegisterViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113CF295A494E0094F2A6 /* RegisterViewOutput.swift */; };
+		22D113D2295A495B0094F2A6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113D1295A495B0094F2A6 /* RegisterView.swift */; };
 		5E32C7DEE12C8C63797E78BA /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D20F6268CA69287BE7C03E /* Pods_Messenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +86,7 @@
 		224B08F72958DEE3000D0CF4 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		224B08F92958E374000D0CF4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		224B08FB2958E39D000D0CF4 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
-		224B08FD2958E3D5000D0CF4 /* KeychainManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManger.swift; sourceTree = "<group>"; };
+		224B08FD2958E3D5000D0CF4 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		224B08FF2958E400000D0CF4 /* DecoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DecoderManager.swift; path = ../../../../../../Downloads/DecoderManager.swift; sourceTree = "<group>"; };
 		224B09012958E431000D0CF4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		224B09042958E520000D0CF4 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -61,6 +98,43 @@
 		22D113692959C13E0094F2A6 /* CoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorOutput.swift; sourceTree = "<group>"; };
 		22D1136B2959C1500094F2A6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		22D1136D2959C1620094F2A6 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		22D113722959DC5A0094F2A6 /* AuthModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModule.swift; sourceTree = "<group>"; };
+		22D113742959DC700094F2A6 /* AuthDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDIContainer.swift; sourceTree = "<group>"; };
+		22D113772959DCC60094F2A6 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		22D113812959DDF30094F2A6 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
+		22D113832959DE0E0094F2A6 /* AuthRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouterInput.swift; sourceTree = "<group>"; };
+		22D113852959DE3C0094F2A6 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		22D113872959DE530094F2A6 /* AuthInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractorInput.swift; sourceTree = "<group>"; };
+		22D113892959DE6F0094F2A6 /* AuthInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractorOutput.swift; sourceTree = "<group>"; };
+		22D1138D2959DE9B0094F2A6 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		22D1138F2959DEB00094F2A6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		22D113912959DEBD0094F2A6 /* AuthViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewInput.swift; sourceTree = "<group>"; };
+		22D113932959DEC80094F2A6 /* AuthViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewOutput.swift; sourceTree = "<group>"; };
+		22D113952959DED30094F2A6 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		22D1139D2959E5ED0094F2A6 /* CheckCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeViewController.swift; sourceTree = "<group>"; };
+		22D1139F2959E61D0094F2A6 /* CheckCodeViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeViewInput.swift; sourceTree = "<group>"; };
+		22D113A12959E6340094F2A6 /* CheckCodeViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeViewOutput.swift; sourceTree = "<group>"; };
+		22D113A32959E6410094F2A6 /* CheckCodeVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeVIew.swift; sourceTree = "<group>"; };
+		22D113A52959E6930094F2A6 /* CheckCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodePresenter.swift; sourceTree = "<group>"; };
+		22D113A72959E6A40094F2A6 /* CheckCodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeInteractor.swift; sourceTree = "<group>"; };
+		22D113A92959E6BD0094F2A6 /* CheckCodeInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeInteractorInput.swift; sourceTree = "<group>"; };
+		22D113AB2959E6CF0094F2A6 /* CheckCodeInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeInteractorOutput.swift; sourceTree = "<group>"; };
+		22D113AD2959E6FD0094F2A6 /* CheckCodeRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeRouterInput.swift; sourceTree = "<group>"; };
+		22D113AF2959E7160094F2A6 /* CheckCodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeAssembly.swift; sourceTree = "<group>"; };
+		22D113B12959E9A10094F2A6 /* CheckAuthCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthCodeRequest.swift; sourceTree = "<group>"; };
+		22D113B32959E9B50094F2A6 /* CheckAuthCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthCodeResponse.swift; sourceTree = "<group>"; };
+		22D113BB295A44520094F2A6 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		22D113BD295A446B0094F2A6 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		22D113BF295A456C0094F2A6 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		22D113C1295A45CA0094F2A6 /* RegisterRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouterInput.swift; sourceTree = "<group>"; };
+		22D113C3295A45F80094F2A6 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		22D113C5295A46100094F2A6 /* RegisterInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractorInput.swift; sourceTree = "<group>"; };
+		22D113C7295A46220094F2A6 /* RegisterInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractorOutput.swift; sourceTree = "<group>"; };
+		22D113C9295A482B0094F2A6 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		22D113CB295A49310094F2A6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		22D113CD295A49400094F2A6 /* RegisterViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewInput.swift; sourceTree = "<group>"; };
+		22D113CF295A494E0094F2A6 /* RegisterViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewOutput.swift; sourceTree = "<group>"; };
+		22D113D1295A495B0094F2A6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		80D20F6268CA69287BE7C03E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		856AC54DE8EDEBFF1BE89953 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		C409A58B5534458E19835F28 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +173,7 @@
 		224B08D12958C341000D0CF4 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				22D1136F2959C50A0094F2A6 /* Modules */,
 				224B08E62958DD59000D0CF4 /* Common */,
 				224B08D22958C341000D0CF4 /* AppDelegate.swift */,
 				22D1135E2959C0360094F2A6 /* AppCoordinator.swift */,
@@ -158,7 +233,7 @@
 				224B08F32958DE77000D0CF4 /* AuthorizedTargetType.swift */,
 				224B08FF2958E400000D0CF4 /* DecoderManager.swift */,
 				224B09012958E431000D0CF4 /* APIManager.swift */,
-				224B08FD2958E3D5000D0CF4 /* KeychainManger.swift */,
+				224B08FD2958E3D5000D0CF4 /* KeychainManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -167,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				224B08F12958DE39000D0CF4 /* SendAuthCodeResponse.swift */,
+				22D113B32959E9B50094F2A6 /* CheckAuthCodeResponse.swift */,
+				22D113BD295A446B0094F2A6 /* RegisterResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -175,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				224B08EF2958DE27000D0CF4 /* SendAuthCodeRequest.swift */,
+				22D113B12959E9A10094F2A6 /* CheckAuthCodeRequest.swift */,
+				22D113BB295A44520094F2A6 /* RegisterRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -198,6 +277,206 @@
 				22D113652959C1150094F2A6 /* BaseCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		22D1136F2959C50A0094F2A6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				22D113762959DC9F0094F2A6 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		22D113702959C5290094F2A6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22D113712959C53C0094F2A6 /* Auth */,
+				22D113972959E5620094F2A6 /* CheckCode */,
+				22D113B5295A43AA0094F2A6 /* Register */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		22D113712959C53C0094F2A6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				22D113802959DD790094F2A6 /* Assembly */,
+				22D1137F2959DD700094F2A6 /* Router */,
+				22D1137D2959DD5A0094F2A6 /* Interactor */,
+				22D1137C2959DD560094F2A6 /* Presenter */,
+				22D1137B2959DD340094F2A6 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		22D113762959DC9F0094F2A6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				22D113722959DC5A0094F2A6 /* AuthModule.swift */,
+				22D113742959DC700094F2A6 /* AuthDIContainer.swift */,
+				22D113772959DCC60094F2A6 /* AuthCoordinator.swift */,
+				22D113702959C5290094F2A6 /* Scenes */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		22D1137B2959DD340094F2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22D1138F2959DEB00094F2A6 /* AuthViewController.swift */,
+				22D113912959DEBD0094F2A6 /* AuthViewInput.swift */,
+				22D113932959DEC80094F2A6 /* AuthViewOutput.swift */,
+				22D113952959DED30094F2A6 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22D1137C2959DD560094F2A6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				22D1138D2959DE9B0094F2A6 /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		22D1137D2959DD5A0094F2A6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				22D113852959DE3C0094F2A6 /* AuthInteractor.swift */,
+				22D113872959DE530094F2A6 /* AuthInteractorInput.swift */,
+				22D113892959DE6F0094F2A6 /* AuthInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		22D1137F2959DD700094F2A6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				22D113832959DE0E0094F2A6 /* AuthRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		22D113802959DD790094F2A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				22D113812959DDF30094F2A6 /* AuthAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		22D113972959E5620094F2A6 /* CheckCode */ = {
+			isa = PBXGroup;
+			children = (
+				22D1139C2959E5CB0094F2A6 /* Assembly */,
+				22D1139B2959E5C10094F2A6 /* Router */,
+				22D1139A2959E5B80094F2A6 /* Interactor */,
+				22D113992959E5B10094F2A6 /* Presenter */,
+				22D113982959E5AB0094F2A6 /* View */,
+			);
+			path = CheckCode;
+			sourceTree = "<group>";
+		};
+		22D113982959E5AB0094F2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22D1139D2959E5ED0094F2A6 /* CheckCodeViewController.swift */,
+				22D1139F2959E61D0094F2A6 /* CheckCodeViewInput.swift */,
+				22D113A12959E6340094F2A6 /* CheckCodeViewOutput.swift */,
+				22D113A32959E6410094F2A6 /* CheckCodeVIew.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22D113992959E5B10094F2A6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				22D113A52959E6930094F2A6 /* CheckCodePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		22D1139A2959E5B80094F2A6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				22D113A72959E6A40094F2A6 /* CheckCodeInteractor.swift */,
+				22D113A92959E6BD0094F2A6 /* CheckCodeInteractorInput.swift */,
+				22D113AB2959E6CF0094F2A6 /* CheckCodeInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		22D1139B2959E5C10094F2A6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				22D113AD2959E6FD0094F2A6 /* CheckCodeRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		22D1139C2959E5CB0094F2A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				22D113AF2959E7160094F2A6 /* CheckCodeAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		22D113B5295A43AA0094F2A6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				22D113BA295A43FD0094F2A6 /* Assembly */,
+				22D113B9295A43F60094F2A6 /* Router */,
+				22D113B8295A43ED0094F2A6 /* Interator */,
+				22D113B7295A43E60094F2A6 /* Presenter */,
+				22D113B6295A43E10094F2A6 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		22D113B6295A43E10094F2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22D113CB295A49310094F2A6 /* RegisterViewController.swift */,
+				22D113CD295A49400094F2A6 /* RegisterViewInput.swift */,
+				22D113CF295A494E0094F2A6 /* RegisterViewOutput.swift */,
+				22D113D1295A495B0094F2A6 /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22D113B7295A43E60094F2A6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				22D113C9295A482B0094F2A6 /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		22D113B8295A43ED0094F2A6 /* Interator */ = {
+			isa = PBXGroup;
+			children = (
+				22D113C3295A45F80094F2A6 /* RegisterInteractor.swift */,
+				22D113C5295A46100094F2A6 /* RegisterInteractorInput.swift */,
+				22D113C7295A46220094F2A6 /* RegisterInteractorOutput.swift */,
+			);
+			path = Interator;
+			sourceTree = "<group>";
+		};
+		22D113B9295A43F60094F2A6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				22D113C1295A45CA0094F2A6 /* RegisterRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		22D113BA295A43FD0094F2A6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				22D113BF295A456C0094F2A6 /* RegisterAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		6A4A796E48852F4B9F9A83A0 /* Pods */ = {
@@ -331,28 +610,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D113B02959E7160094F2A6 /* CheckCodeAssembly.swift in Sources */,
+				22D1138E2959DE9B0094F2A6 /* AuthPresenter.swift in Sources */,
+				22D113A42959E6410094F2A6 /* CheckCodeVIew.swift in Sources */,
 				224B09002958E400000D0CF4 /* DecoderManager.swift in Sources */,
 				224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */,
+				22D113A02959E61D0094F2A6 /* CheckCodeViewInput.swift in Sources */,
+				22D113C8295A46220094F2A6 /* RegisterInteractorOutput.swift in Sources */,
+				22D113752959DC700094F2A6 /* AuthDIContainer.swift in Sources */,
+				22D113902959DEB00094F2A6 /* AuthViewController.swift in Sources */,
 				224B08F62958DEA5000D0CF4 /* Moya.Task.swift in Sources */,
-				224B08FE2958E3D5000D0CF4 /* KeychainManger.swift in Sources */,
+				22D113B22959E9A10094F2A6 /* CheckAuthCodeRequest.swift in Sources */,
+				22D113A22959E6340094F2A6 /* CheckCodeViewOutput.swift in Sources */,
+				22D113C6295A46100094F2A6 /* RegisterInteractorInput.swift in Sources */,
+				22D113922959DEBD0094F2A6 /* AuthViewInput.swift in Sources */,
+				224B08FE2958E3D5000D0CF4 /* KeychainManager.swift in Sources */,
+				22D113CE295A49400094F2A6 /* RegisterViewInput.swift in Sources */,
+				22D113D0295A494E0094F2A6 /* RegisterViewOutput.swift in Sources */,
+				22D113782959DCC60094F2A6 /* AuthCoordinator.swift in Sources */,
+				22D113BC295A44520094F2A6 /* RegisterRequest.swift in Sources */,
+				22D113B42959E9B50094F2A6 /* CheckAuthCodeResponse.swift in Sources */,
 				22D113642959C0FF0094F2A6 /* Router.swift in Sources */,
+				22D113A82959E6A40094F2A6 /* CheckCodeInteractor.swift in Sources */,
+				22D1138A2959DE6F0094F2A6 /* AuthInteractorOutput.swift in Sources */,
 				22D1135F2959C0360094F2A6 /* AppCoordinator.swift in Sources */,
 				224B08F22958DE39000D0CF4 /* SendAuthCodeResponse.swift in Sources */,
 				22D1136A2959C13E0094F2A6 /* CoordinatorOutput.swift in Sources */,
+				22D113AC2959E6CF0094F2A6 /* CheckCodeInteractorOutput.swift in Sources */,
+				22D113CA295A482B0094F2A6 /* RegisterPresenter.swift in Sources */,
+				22D113C4295A45F80094F2A6 /* RegisterInteractor.swift in Sources */,
 				224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */,
+				22D113C0295A456C0094F2A6 /* RegisterAssembly.swift in Sources */,
 				224B08F02958DE27000D0CF4 /* SendAuthCodeRequest.swift in Sources */,
 				224B08FC2958E39D000D0CF4 /* AuthPlugin.swift in Sources */,
+				22D113A62959E6930094F2A6 /* CheckCodePresenter.swift in Sources */,
+				22D113AE2959E6FD0094F2A6 /* CheckCodeRouterInput.swift in Sources */,
+				22D113842959DE0E0094F2A6 /* AuthRouterInput.swift in Sources */,
 				224B08D32958C341000D0CF4 /* AppDelegate.swift in Sources */,
 				224B08EE2958DDFE000D0CF4 /* Users.swift in Sources */,
+				22D113862959DE3C0094F2A6 /* AuthInteractor.swift in Sources */,
+				22D113962959DED30094F2A6 /* AuthView.swift in Sources */,
+				22D113AA2959E6BD0094F2A6 /* CheckCodeInteractorInput.swift in Sources */,
+				22D113C2295A45CA0094F2A6 /* RegisterRouterInput.swift in Sources */,
 				22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */,
 				224B08D52958C341000D0CF4 /* SceneDelegate.swift in Sources */,
+				22D1139E2959E5ED0094F2A6 /* CheckCodeViewController.swift in Sources */,
 				224B09022958E431000D0CF4 /* APIManager.swift in Sources */,
 				22D1136E2959C1620094F2A6 /* NavigationRouter.swift in Sources */,
 				22D113662959C1150094F2A6 /* BaseCoordinator.swift in Sources */,
+				22D113882959DE530094F2A6 /* AuthInteractorInput.swift in Sources */,
+				22D113942959DEC80094F2A6 /* AuthViewOutput.swift in Sources */,
 				224B08F42958DE77000D0CF4 /* AuthorizedTargetType.swift in Sources */,
 				224B08F82958DEE3000D0CF4 /* Encodable.swift in Sources */,
 				224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */,
+				22D113D2295A495B0094F2A6 /* RegisterView.swift in Sources */,
+				22D113CC295A49310094F2A6 /* RegisterViewController.swift in Sources */,
+				22D113732959DC5A0094F2A6 /* AuthModule.swift in Sources */,
+				22D113BE295A446C0094F2A6 /* RegisterResponse.swift in Sources */,
 				22D1136C2959C1500094F2A6 /* Coordinator.swift in Sources */,
+				22D113822959DDF30094F2A6 /* AuthAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +813,6 @@
 				INFOPLIST_FILE = Messenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,7 +840,6 @@
 				INFOPLIST_FILE = Messenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

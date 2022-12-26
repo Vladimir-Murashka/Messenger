@@ -7,6 +7,8 @@
 
 protocol APIManagerable {
     func sendAuthCode(request: SendAuthCodeRequest) async throws -> SendAuthCodeResponse
+    func checkAuthCode(request: CheckAuthCodeRequest) async throws -> CheckAuthCodeResponse
+    func register(request: RegisterRequest) async throws -> RegisterResponse
 }
 
 final class APIManager {
@@ -25,6 +27,16 @@ final class APIManager {
 extension APIManager: APIManagerable {
     func sendAuthCode(request: SendAuthCodeRequest) async throws -> SendAuthCodeResponse {
         let response = try await networkManager.request(.sendAuthCode(request: request))
+        return try decoderManager.decode(response)
+    }
+    
+    func checkAuthCode(request: CheckAuthCodeRequest) async throws -> CheckAuthCodeResponse {
+        let response = try await networkManager.request(.checkAuthCode(request: request))
+        return try decoderManager.decode(response)
+    }
+    
+    func register(request: RegisterRequest) async throws -> RegisterResponse {
+        let response = try await networkManager.request(.register(request: request))
         return try decoderManager.decode(response)
     }
 }
