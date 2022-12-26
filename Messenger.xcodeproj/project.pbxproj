@@ -24,6 +24,13 @@
 		224B09022958E431000D0CF4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09012958E431000D0CF4 /* APIManager.swift */; };
 		224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09042958E520000D0CF4 /* ErrorResponse.swift */; };
 		224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09062958E540000D0CF4 /* ErrorDetail.swift */; };
+		22D1135F2959C0360094F2A6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1135E2959C0360094F2A6 /* AppCoordinator.swift */; };
+		22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113602959C06F0094F2A6 /* AppDIContainer.swift */; };
+		22D113642959C0FF0094F2A6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113632959C0FF0094F2A6 /* Router.swift */; };
+		22D113662959C1150094F2A6 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113652959C1150094F2A6 /* BaseCoordinator.swift */; };
+		22D1136A2959C13E0094F2A6 /* CoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113692959C13E0094F2A6 /* CoordinatorOutput.swift */; };
+		22D1136C2959C1500094F2A6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1136B2959C1500094F2A6 /* Coordinator.swift */; };
+		22D1136E2959C1620094F2A6 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1136D2959C1620094F2A6 /* NavigationRouter.swift */; };
 		5E32C7DEE12C8C63797E78BA /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D20F6268CA69287BE7C03E /* Pods_Messenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +54,13 @@
 		224B09012958E431000D0CF4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		224B09042958E520000D0CF4 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		224B09062958E540000D0CF4 /* ErrorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetail.swift; sourceTree = "<group>"; };
+		22D1135E2959C0360094F2A6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		22D113602959C06F0094F2A6 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		22D113632959C0FF0094F2A6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Messenger/Common/Models/Router.swift; sourceTree = SOURCE_ROOT; };
+		22D113652959C1150094F2A6 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		22D113692959C13E0094F2A6 /* CoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorOutput.swift; sourceTree = "<group>"; };
+		22D1136B2959C1500094F2A6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		22D1136D2959C1620094F2A6 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		80D20F6268CA69287BE7C03E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		856AC54DE8EDEBFF1BE89953 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		C409A58B5534458E19835F28 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +101,8 @@
 			children = (
 				224B08E62958DD59000D0CF4 /* Common */,
 				224B08D22958C341000D0CF4 /* AppDelegate.swift */,
+				22D1135E2959C0360094F2A6 /* AppCoordinator.swift */,
+				22D113602959C06F0094F2A6 /* AppDIContainer.swift */,
 				224B08D42958C341000D0CF4 /* SceneDelegate.swift */,
 				224B08DB2958C343000D0CF4 /* Assets.xcassets */,
 				224B08DD2958C343000D0CF4 /* LaunchScreen.storyboard */,
@@ -98,6 +114,7 @@
 		224B08E62958DD59000D0CF4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				22D113622959C0ED0094F2A6 /* Coordinator */,
 				224B08E72958DD80000D0CF4 /* Extensions */,
 				224B08E82958DD8C000D0CF4 /* Entities */,
 				224B08E92958DD97000D0CF4 /* Models */,
@@ -169,6 +186,18 @@
 				224B09062958E540000D0CF4 /* ErrorDetail.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		22D113622959C0ED0094F2A6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				22D113632959C0FF0094F2A6 /* Router.swift */,
+				22D1136D2959C1620094F2A6 /* NavigationRouter.swift */,
+				22D1136B2959C1500094F2A6 /* Coordinator.swift */,
+				22D113692959C13E0094F2A6 /* CoordinatorOutput.swift */,
+				22D113652959C1150094F2A6 /* BaseCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		6A4A796E48852F4B9F9A83A0 /* Pods */ = {
@@ -306,17 +335,24 @@
 				224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */,
 				224B08F62958DEA5000D0CF4 /* Moya.Task.swift in Sources */,
 				224B08FE2958E3D5000D0CF4 /* KeychainManger.swift in Sources */,
+				22D113642959C0FF0094F2A6 /* Router.swift in Sources */,
+				22D1135F2959C0360094F2A6 /* AppCoordinator.swift in Sources */,
 				224B08F22958DE39000D0CF4 /* SendAuthCodeResponse.swift in Sources */,
+				22D1136A2959C13E0094F2A6 /* CoordinatorOutput.swift in Sources */,
 				224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */,
 				224B08F02958DE27000D0CF4 /* SendAuthCodeRequest.swift in Sources */,
 				224B08FC2958E39D000D0CF4 /* AuthPlugin.swift in Sources */,
 				224B08D32958C341000D0CF4 /* AppDelegate.swift in Sources */,
 				224B08EE2958DDFE000D0CF4 /* Users.swift in Sources */,
+				22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */,
 				224B08D52958C341000D0CF4 /* SceneDelegate.swift in Sources */,
 				224B09022958E431000D0CF4 /* APIManager.swift in Sources */,
+				22D1136E2959C1620094F2A6 /* NavigationRouter.swift in Sources */,
+				22D113662959C1150094F2A6 /* BaseCoordinator.swift in Sources */,
 				224B08F42958DE77000D0CF4 /* AuthorizedTargetType.swift in Sources */,
 				224B08F82958DEE3000D0CF4 /* Encodable.swift in Sources */,
 				224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */,
+				22D1136C2959C1500094F2A6 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
