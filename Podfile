@@ -9,5 +9,6 @@ target 'Messenger' do
 
 	pod 'Moya'
   pod 'FlagPhoneNumber'
+  pod 'AEOTPTextField'
 
 end
