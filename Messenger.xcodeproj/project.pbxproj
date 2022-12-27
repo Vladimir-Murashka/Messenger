@@ -68,6 +68,7 @@
 		22D113CE295A49400094F2A6 /* RegisterViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113CD295A49400094F2A6 /* RegisterViewInput.swift */; };
 		22D113D0295A494E0094F2A6 /* RegisterViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113CF295A494E0094F2A6 /* RegisterViewOutput.swift */; };
 		22D113D2295A495B0094F2A6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113D1295A495B0094F2A6 /* RegisterView.swift */; };
+		22D113D9295B2D070094F2A6 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22D113D8295B2D070094F2A6 /* Roboto.ttf */; };
 		5E32C7DEE12C8C63797E78BA /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D20F6268CA69287BE7C03E /* Pods_Messenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		22D113CD295A49400094F2A6 /* RegisterViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewInput.swift; sourceTree = "<group>"; };
 		22D113CF295A494E0094F2A6 /* RegisterViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewOutput.swift; sourceTree = "<group>"; };
 		22D113D1295A495B0094F2A6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		22D113D8295B2D070094F2A6 /* Roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Roboto.ttf; sourceTree = "<group>"; };
 		80D20F6268CA69287BE7C03E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		856AC54DE8EDEBFF1BE89953 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		C409A58B5534458E19835F28 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		224B08E82958DD8C000D0CF4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				22D113D7295B2CBF0094F2A6 /* Fonts */,
 				224B09032958E4FA000D0CF4 /* Error */,
 				224B08ED2958DDFE000D0CF4 /* Users.swift */,
 			);
@@ -479,6 +482,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		22D113D7295B2CBF0094F2A6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				22D113D8295B2D070094F2A6 /* Roboto.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		6A4A796E48852F4B9F9A83A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +567,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D113D9295B2D070094F2A6 /* Roboto.ttf in Resources */,
 				224B08DF2958C343000D0CF4 /* LaunchScreen.storyboard in Resources */,
 				224B08DC2958C343000D0CF4 /* Assets.xcassets in Resources */,
 			);
