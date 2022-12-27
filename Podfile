@@ -8,5 +8,6 @@ target 'Messenger' do
   # Pods for Messenger
 
 	pod 'Moya'
+  pod 'FlagPhoneNumber'
 
 end

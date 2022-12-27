@@ -22,7 +22,13 @@ final class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.sendButtonPressed(phone: "79999999999")
+    }
+    
+    override func touchesBegan(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?
+    ) {
+        self.view.endEditing(true)
     }
 }
 
