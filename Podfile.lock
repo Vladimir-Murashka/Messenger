@@ -1,4 +1,5 @@
 PODS:
+  - AEOTPTextField (1.2.6)
   - Alamofire (5.6.4)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
@@ -9,20 +10,23 @@ PODS:
     - Alamofire (~> 5.0)
 
 DEPENDENCIES:
+  - AEOTPTextField
   - FlagPhoneNumber
   - Moya
 
 SPEC REPOS:
   trunk:
+    - AEOTPTextField
     - Alamofire
     - FlagPhoneNumber
     - Moya
 
 SPEC CHECKSUMS:
+  AEOTPTextField: a275823fde05601c5da7f8fb66aaecb41289b370
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
 
-PODFILE CHECKSUM: 4638a01d499aceb466e26206b4a1374c2e2b2e74
+PODFILE CHECKSUM: 86be6dab0e68ddebdcb22246f8376a56b4fc58f6
 
 COCOAPODS: 1.11.3

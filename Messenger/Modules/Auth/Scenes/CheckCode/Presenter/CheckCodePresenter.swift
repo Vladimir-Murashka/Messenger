@@ -18,7 +18,7 @@ final class CheckCodePresenter {
 }
 
 extension CheckCodePresenter: CheckCodeViewOutput {
-    func sendButtonPressed(code: String) {
+    func sendCodeButtonPressed(code: String) {
         view.startLoading()
         let request = CheckAuthCodeRequest(phone: phone, code: code)
         interactor.checkAuthCode(request: request)
