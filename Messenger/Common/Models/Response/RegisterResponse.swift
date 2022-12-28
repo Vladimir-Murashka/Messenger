@@ -6,9 +6,9 @@
 //
 
 struct RegisterResponse: Decodable {
-    let refreshToken: String
-    let accessToken: String
-    let userID: Int
+    let refreshToken: String?
+    let accessToken: String?
+    let userID: Int?
     
     enum CodingKeys: String, CodingKey {
         case refreshToken = "refresh_token"

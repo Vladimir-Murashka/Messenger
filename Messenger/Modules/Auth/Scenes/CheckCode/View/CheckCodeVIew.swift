@@ -63,7 +63,7 @@ final class CheckCodeView: UIView {
 
     @objc
     private func didTapSendCodeButton() {
-        output.sendCodeButtonPressed(code: "")
+        output.sendCodeButtonPressed(code: "133337")
     }
     
     private func setupView() {
@@ -98,7 +98,7 @@ final class CheckCodeView: UIView {
             sendButton.heightAnchor.constraint(equalToConstant: defaultHeigth),
             sendButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
             sendButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
-            sendButton.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor)
+            sendButton.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor, constant: -defaultOffset)
         ])
     }
 }

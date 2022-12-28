@@ -33,4 +33,14 @@ final class AuthDIContainer {
 
         return assembly.build(phone: phone)
     }
+    
+    func makeRegisterViewController(router: RegisterRouterInput, phone: String) -> UIViewController {
+        let dependencies = RegisterDependencies(
+            router: router,
+            apiManager: dependencies.apiManager
+        )
+        let assembly = RegisterAssembly(dependencies: dependencies)
+
+        return assembly.build(phone: phone)
+    }
 }

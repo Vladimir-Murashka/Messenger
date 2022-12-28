@@ -30,7 +30,7 @@ extension CheckCodePresenter: CheckCodeInteractorOutput {
         view.stopLoading()
         response.isUserExists
         ? router.finishFlow()
-        : router.routeToRegister()
+        : router.routeToRegister(phone: phone)
     }
     
     func didCheckAuthCodeFailure(error: Error) {
