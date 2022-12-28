@@ -94,7 +94,7 @@ final class AuthView: UIView {
             sendButton.heightAnchor.constraint(equalToConstant: defaultHeigth),
             sendButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
             sendButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
-            sendButton.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor)
+            sendButton.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor, constant: -defaultOffset)
         ])
     }
 }

@@ -38,9 +38,15 @@ extension AuthFlowCoordinator: AuthRouterInput {
 }
 
 extension AuthFlowCoordinator: CheckCodeRouterInput {
-    func routeToRegister() {}
-    
+    func routeToRegister(phone: String) {
+        let registerViewController = diContainer.makeRegisterViewController(router: self, phone: phone)
+        router.push(registerViewController)
+    }
     func finishFlow() {
         onFinish?()
     }
+}
+
+extension AuthFlowCoordinator: RegisterRouterInput {
+    
 }

@@ -6,6 +6,6 @@
 //
 
 protocol CheckCodeRouterInput: AnyObject {
-    func routeToRegister()
+    func routeToRegister(phone: String)
     func finishFlow()
 }
