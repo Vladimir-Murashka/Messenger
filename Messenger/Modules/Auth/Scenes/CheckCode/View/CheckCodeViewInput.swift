@@ -9,4 +9,5 @@ protocol CheckCodeViewInput: AnyObject {
     func showError()
     func startLoading()
     func stopLoading()
+    
 }

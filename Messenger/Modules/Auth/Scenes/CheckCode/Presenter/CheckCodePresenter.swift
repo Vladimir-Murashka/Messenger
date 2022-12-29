@@ -11,14 +11,19 @@ final class CheckCodePresenter {
     weak var router: CheckCodeRouterInput!
     
     private let phone: String
+    private let phoneForTextFeild: String
 
-    init(phone: String) {
+    init(
+        phone: String,
+        phoneForTextFeild: String
+    ) {
         self.phone = phone
+        self.phoneForTextFeild = phoneForTextFeild
     }
 }
 
 extension CheckCodePresenter: CheckCodeViewOutput {
-    func sendCodeButtonPressed(code: String) {
+    func didUserFinishEnter(code: String) {
         view.startLoading()
         let request = CheckAuthCodeRequest(phone: phone, code: code)
         interactor.checkAuthCode(request: request)
@@ -30,7 +35,7 @@ extension CheckCodePresenter: CheckCodeInteractorOutput {
         view.stopLoading()
         response.isUserExists
         ? router.finishFlow()
-        : router.routeToRegister(phone: phone)
+        : router.routeToRegister(phone: phone, phoneForTextFeild: phoneForTextFeild)
     }
     
     func didCheckAuthCodeFailure(error: Error) {

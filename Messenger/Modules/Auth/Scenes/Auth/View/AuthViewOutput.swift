@@ -6,5 +6,5 @@
 //
 
 protocol AuthViewOutput: AnyObject {
-    func sendButtonPressed(phone: String)
+    func sendButtonPressed(phone: String, phoneForTextFeild: String)
 }

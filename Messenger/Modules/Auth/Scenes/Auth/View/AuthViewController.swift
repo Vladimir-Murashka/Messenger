@@ -22,6 +22,7 @@ final class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func touchesBegan(
@@ -38,4 +39,5 @@ extension AuthViewController: AuthViewInput {
     func stopLoading() {}
 
     func showError() {}
+
 }

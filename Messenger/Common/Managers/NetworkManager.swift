@@ -16,7 +16,8 @@ final class NetworkManager {
     private lazy var provider = MoyaProvider<Users>(plugins: [
         AuthPlugin(tokenClosure: { [unowned self] in
             self.tokensStorage.accessToken
-        })
+        }),
+        LoggerPlugin()
     ])
 
     init(tokensStorage: TokensStorage) {

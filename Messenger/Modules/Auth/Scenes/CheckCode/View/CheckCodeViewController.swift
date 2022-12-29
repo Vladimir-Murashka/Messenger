@@ -37,5 +37,7 @@ extension CheckCodeViewController: CheckCodeViewInput {
 
     func stopLoading() {}
 
-    func showError() {}
+    func showError() {
+        checkCodeView.clearOTP()
+    }
 }

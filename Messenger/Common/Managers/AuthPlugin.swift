@@ -36,13 +36,7 @@ struct LoggerPlugin: PluginType {
         switch result {
         case .success(let success):
             if let urlString = success.request?.url?.absoluteString {
-                print("\(Date()) response \(urlString)")
-                print("""
-{
-    "statusCode": \(success.statusCode)
-    "data": data
-}
-""")
+                print("\(Date()) response \(urlString) \(success.statusCode)")
             }
         case .failure(let failure):
             print("Logger: \(Date()) - Error \(failure.localizedDescription)")

@@ -13,19 +13,17 @@ final class AuthView: UIView {
 
     // MARK: - Private properties
     
-    private let logo: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
-    private let phoneTextField: FPNTextField = {
+    private lazy var phoneTextField: FPNTextField = {
         let textField = FPNTextField()
         textField.font = UIFont(name: "Roboto", size: 20)
         textField.setFlag(key: .RU)
-        textField.placeholder = "921 999-99-99"
-        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         return textField
     }()
 
@@ -40,7 +38,7 @@ final class AuthView: UIView {
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(didTapSendButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
+        button.isEnabled = false
         return button
     }()
 
@@ -59,8 +57,11 @@ final class AuthView: UIView {
 
     @objc
     private func didTapSendButton() {
-        let phone = phoneTextField.text ?? ""
-        output.sendButtonPressed(phone: phone)
+        sendButton.pushAnimate { [weak self] in
+            let phoneForTextFeild = self?.phoneTextField.getRawPhoneNumber() ?? ""
+            let phone = self?.phoneTextField.getFormattedPhoneNumber(format: .E164) ?? ""
+            self?.output.sendButtonPressed(phone: phone, phoneForTextFeild: phoneForTextFeild)
+        }
     }
     
     private func setupView() {
@@ -70,9 +71,11 @@ final class AuthView: UIView {
     }
     
     private func addSubViews() {
-        addSubview(logo)
-        addSubview(phoneTextField)
-        addSubview(sendButton)
+        addSubviews(
+            logoImageView,
+            phoneTextField,
+            sendButton
+        )
     }
     
     private func setupConstraints() {
@@ -82,19 +85,43 @@ final class AuthView: UIView {
         let phoneTextFieldTopOffset: CGFloat = 64
         
         NSLayoutConstraint.activate([
-            logo.widthAnchor.constraint(equalToConstant: logoSize),
-            logo.heightAnchor.constraint(equalToConstant: logoSize),
-            logo.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
-            logo.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            logoImageView.widthAnchor.constraint(equalToConstant: logoSize),
+            logoImageView.heightAnchor.constraint(equalToConstant: logoSize),
+            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
+            logoImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             
             phoneTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
             phoneTextField.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            phoneTextField.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: phoneTextFieldTopOffset),
+            phoneTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: phoneTextFieldTopOffset),
             
             sendButton.heightAnchor.constraint(equalToConstant: defaultHeigth),
             sendButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
             sendButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
             sendButton.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor, constant: -defaultOffset)
         ])
+    }
+}
+
+extension AuthView: FPNTextFieldDelegate {
+    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {}
+    
+    func fpnDidValidatePhoneNumber(textField: FlagPhoneNumber.FPNTextField, isValid: Bool) {
+        if isValid {
+            enabledSendButton()
+        } else {
+            disabledSendButton()
+        }
+    }
+    
+    func fpnDisplayCountryList() {}
+}
+
+extension AuthView {
+    func enabledSendButton() {
+        sendButton.isEnabled = true
+    }
+    
+    func disabledSendButton() {
+        sendButton.isEnabled = false
     }
 }

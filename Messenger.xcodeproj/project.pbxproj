@@ -24,6 +24,8 @@
 		224B09022958E431000D0CF4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09012958E431000D0CF4 /* APIManager.swift */; };
 		224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09042958E520000D0CF4 /* ErrorResponse.swift */; };
 		224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09062958E540000D0CF4 /* ErrorDetail.swift */; };
+		22B46D71295DCF7500121A5C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D70295DCF7500121A5C /* UIView.swift */; };
+		22B46D73295DD15600121A5C /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D72295DD15600121A5C /* UIStackView.swift */; };
 		22D1135F2959C0360094F2A6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1135E2959C0360094F2A6 /* AppCoordinator.swift */; };
 		22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113602959C06F0094F2A6 /* AppDIContainer.swift */; };
 		22D113642959C0FF0094F2A6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113632959C0FF0094F2A6 /* Router.swift */; };
@@ -92,6 +94,8 @@
 		224B09012958E431000D0CF4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		224B09042958E520000D0CF4 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		224B09062958E540000D0CF4 /* ErrorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetail.swift; sourceTree = "<group>"; };
+		22B46D70295DCF7500121A5C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		22B46D72295DD15600121A5C /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		22D1135E2959C0360094F2A6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		22D113602959C06F0094F2A6 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		22D113632959C0FF0094F2A6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Messenger/Common/Models/Router.swift; sourceTree = SOURCE_ROOT; };
@@ -205,6 +209,8 @@
 			children = (
 				224B08F72958DEE3000D0CF4 /* Encodable.swift */,
 				224B08F52958DEA5000D0CF4 /* Moya.Task.swift */,
+				22B46D70295DCF7500121A5C /* UIView.swift */,
+				22B46D72295DD15600121A5C /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -625,6 +631,7 @@
 				22D113B02959E7160094F2A6 /* CheckCodeAssembly.swift in Sources */,
 				22D1138E2959DE9B0094F2A6 /* AuthPresenter.swift in Sources */,
 				22D113A42959E6410094F2A6 /* CheckCodeVIew.swift in Sources */,
+				22B46D73295DD15600121A5C /* UIStackView.swift in Sources */,
 				224B09002958E400000D0CF4 /* DecoderManager.swift in Sources */,
 				224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */,
 				22D113A02959E61D0094F2A6 /* CheckCodeViewInput.swift in Sources */,
@@ -662,6 +669,7 @@
 				224B08EE2958DDFE000D0CF4 /* Users.swift in Sources */,
 				22D113862959DE3C0094F2A6 /* AuthInteractor.swift in Sources */,
 				22D113962959DED30094F2A6 /* AuthView.swift in Sources */,
+				22B46D71295DCF7500121A5C /* UIView.swift in Sources */,
 				22D113AA2959E6BD0094F2A6 /* CheckCodeInteractorInput.swift in Sources */,
 				22D113C2295A45CA0094F2A6 /* RegisterRouterInput.swift in Sources */,
 				22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */,

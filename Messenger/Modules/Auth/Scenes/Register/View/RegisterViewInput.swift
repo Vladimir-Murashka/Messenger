@@ -9,4 +9,5 @@ protocol RegisterViewInput: AnyObject {
     func showError()
     func startLoading()
     func stopLoading()
+    func updateTextField(for number: String)
 }

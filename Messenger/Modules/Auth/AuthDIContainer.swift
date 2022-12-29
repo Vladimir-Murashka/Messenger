@@ -24,23 +24,23 @@ final class AuthDIContainer {
         return assembly.build()
     }
     
-    func makeCheckCodeViewController(router: CheckCodeRouterInput, phone: String) -> UIViewController {
+    func makeCheckCodeViewController(router: CheckCodeRouterInput, phone: String, phoneForTextFeild: String) -> UIViewController {
         let dependencies = CheckCodeDependencies(
             router: router,
             apiManager: dependencies.apiManager
         )
         let assembly = CheckCodeAssembly(dependencies: dependencies)
 
-        return assembly.build(phone: phone)
+        return assembly.build(phone: phone, phoneForTextFeild: phoneForTextFeild)
     }
     
-    func makeRegisterViewController(router: RegisterRouterInput, phone: String) -> UIViewController {
+    func makeRegisterViewController(router: RegisterRouterInput, phone: String, phoneForTextFeild: String) -> UIViewController {
         let dependencies = RegisterDependencies(
             router: router,
             apiManager: dependencies.apiManager
         )
         let assembly = RegisterAssembly(dependencies: dependencies)
 
-        return assembly.build(phone: phone)
+        return assembly.build(phone: phone, phoneForTextFeild: phoneForTextFeild)
     }
 }

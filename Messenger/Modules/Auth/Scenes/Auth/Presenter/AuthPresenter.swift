@@ -11,13 +11,15 @@ final class AuthPresenter {
     weak var router: AuthRouterInput!
     
     private var phone: String = ""
+    private var phoneForTextFeild: String = ""
 
     init() {}
 }
 
 extension AuthPresenter: AuthViewOutput {
-    func sendButtonPressed(phone: String) {
+    func sendButtonPressed(phone: String, phoneForTextFeild: String) {
         self.phone = phone
+        self.phoneForTextFeild = phoneForTextFeild
         view.startLoading()
         let request = SendAuthCodeRequest(phone: phone)
         interactor.sendAuthCode(request: request)
@@ -28,7 +30,7 @@ extension AuthPresenter: AuthInteractorOutput {
     func didSendAuthCodeSuccessfully(response: SendAuthCodeResponse) {
         view.stopLoading()
         response.isSuccess
-        ? router.routeToCheckAuthCode(phone: phone)
+        ? router.routeToCheckAuthCode(phone: phone, phoneForTextFeild: phoneForTextFeild)
         : view.showError()
     }
     
