@@ -6,5 +6,5 @@
 //
 
 protocol AuthRouterInput: AnyObject {
-    func routeToCheckAuthCode(phone: String)
+    func routeToCheckAuthCode(phone: String, phoneForTextFeild: String)
 }

@@ -6,5 +6,5 @@
 //
 
 protocol CheckCodeViewOutput: AnyObject {
-    func sendCodeButtonPressed(code: String)
+    func didUserFinishEnter(code: String)
 }

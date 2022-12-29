@@ -13,10 +13,9 @@ final class CheckCodeView: UIView {
 
     // MARK: - Private properties
 
-    private let logo: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -29,23 +28,8 @@ final class CheckCodeView: UIView {
         textField.otpFilledBorderColor = .systemTeal
         textField.otpFont = UIFont(name: "Roboto", size: 18) ?? UIFont.systemFont(ofSize: 18)
         textField.configure(with: 6)
-        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.otpDelegate = self
         return textField
-    }()
-    
-    private lazy var sendButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.titleLabel?.font = UIFont(name: "Roboto", size: 20)
-        button.setTitle("Проверить", for: .normal)
-        button.tintColor = .systemTeal
-        button.backgroundColor = .clear
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.systemTeal.cgColor
-        button.layer.cornerRadius = 8
-        button.layer.masksToBounds = true
-        button.addTarget(self, action: #selector(didTapSendCodeButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
     }()
     
     // MARK: - Init
@@ -60,11 +44,6 @@ final class CheckCodeView: UIView {
     }
 
     // MARK: - Private methods
-
-    @objc
-    private func didTapSendCodeButton() {
-        output.sendCodeButtonPressed(code: "133337")
-    }
     
     private func setupView() {
         backgroundColor = .systemBackground
@@ -73,32 +52,40 @@ final class CheckCodeView: UIView {
     }
     
     private func addSubViews() {
-        addSubview(logo)
-        addSubview(checkCodeTextField)
-        addSubview(sendButton)
+        addSubviews(
+            logoImageView,
+            checkCodeTextField
+        )
     }
     
     private func setupConstraints() {
         let logoSize: CGFloat = 150
         let defaultOffset: CGFloat = 16
         let defaultHeigth: CGFloat = 50
-        let checkCodeTextFieldTopOffset: CGFloat = 64
         
         NSLayoutConstraint.activate([
-            logo.widthAnchor.constraint(equalToConstant: logoSize),
-            logo.heightAnchor.constraint(equalToConstant: logoSize),
-            logo.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
-            logo.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            logoImageView.widthAnchor.constraint(equalToConstant: logoSize),
+            logoImageView.heightAnchor.constraint(equalToConstant: logoSize),
+            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
+            logoImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             
             checkCodeTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
             checkCodeTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
             checkCodeTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
-            checkCodeTextField.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: checkCodeTextFieldTopOffset),
-            
-            sendButton.heightAnchor.constraint(equalToConstant: defaultHeigth),
-            sendButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
-            sendButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
-            sendButton.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor, constant: -defaultOffset)
+            checkCodeTextField.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor)
         ])
+    }
+}
+
+extension CheckCodeView: AEOTPTextFieldDelegate {
+    func didUserFinishEnter(the code: String) {
+        print(code)
+        output.didUserFinishEnter(code: code)
+    }
+}
+
+extension CheckCodeView {
+    func clearOTP() {
+        checkCodeTextField.clearOTP()
     }
 }

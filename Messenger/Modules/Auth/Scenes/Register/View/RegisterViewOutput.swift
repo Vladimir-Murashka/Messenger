@@ -7,4 +7,5 @@
 
 protocol RegisterViewOutput: AnyObject {
     func registerButtonPressed(name: String, userName: String)
+    func viewDidLoad()
 }

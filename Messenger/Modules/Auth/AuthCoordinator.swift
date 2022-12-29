@@ -31,15 +31,15 @@ final class AuthFlowCoordinator: BaseCoordinator & CoordinatorOutput {
 }
 
 extension AuthFlowCoordinator: AuthRouterInput {
-    func routeToCheckAuthCode(phone: String) {
-        let checkCodeViewController = diContainer.makeCheckCodeViewController(router: self, phone: phone)
+    func routeToCheckAuthCode(phone: String, phoneForTextFeild: String) {
+        let checkCodeViewController = diContainer.makeCheckCodeViewController(router: self, phone: phone, phoneForTextFeild: phoneForTextFeild)
         router.push(checkCodeViewController)
     }
 }
 
 extension AuthFlowCoordinator: CheckCodeRouterInput {
-    func routeToRegister(phone: String) {
-        let registerViewController = diContainer.makeRegisterViewController(router: self, phone: phone)
+    func routeToRegister(phone: String, phoneForTextFeild: String) {
+        let registerViewController = diContainer.makeRegisterViewController(router: self, phone: phone, phoneForTextFeild: phoneForTextFeild)
         router.push(registerViewController)
     }
     func finishFlow() {

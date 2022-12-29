@@ -19,10 +19,10 @@ struct RegisterAssembly {
         self.dependencies = dependencies
     }
 
-    func build(phone: String) -> UIViewController {
+    func build(phone: String, phoneForTextFeild: String) -> UIViewController {
         let viewController = RegisterViewController()
 
-        let presenter = RegisterPresenter(phone: phone)
+        let presenter = RegisterPresenter(phone: phone, phoneForTextFeild: phoneForTextFeild)
         presenter.view = viewController
         presenter.router = dependencies.router
 

@@ -19,10 +19,10 @@ struct CheckCodeAssembly {
         self.dependencies = dependencies
     }
 
-    func build(phone: String) -> UIViewController {
+    func build(phone: String, phoneForTextFeild: String) -> UIViewController {
         let viewController = CheckCodeViewController()
 
-        let presenter = CheckCodePresenter(phone: phone)
+        let presenter = CheckCodePresenter(phone: phone, phoneForTextFeild: phoneForTextFeild)
         presenter.view = viewController
         presenter.router = dependencies.router
 

@@ -13,10 +13,9 @@ final class RegisterView: UIView {
 
     // MARK: - Private properties
     
-    private let logo: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -24,9 +23,7 @@ final class RegisterView: UIView {
         let textField = FPNTextField()
         textField.font = UIFont(name: "Roboto", size: 20)
         textField.setFlag(key: .RU)
-        textField.set(phoneNumber: "9219999999")
         textField.isUserInteractionEnabled = false
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -41,7 +38,6 @@ final class RegisterView: UIView {
         textField.layer.cornerRadius = 8
         textField.layer.masksToBounds = true
         textField.textAlignment = .center
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -56,7 +52,6 @@ final class RegisterView: UIView {
         textField.layer.cornerRadius = 8
         textField.layer.masksToBounds = true
         textField.textAlignment = .center
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -66,7 +61,6 @@ final class RegisterView: UIView {
         stackView.spacing = 8
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -81,7 +75,6 @@ final class RegisterView: UIView {
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -100,7 +93,7 @@ final class RegisterView: UIView {
     
     @objc
     private func didTapRegisterButton() {
-        output.registerButtonPressed(name: "", userName: "")
+        output.registerButtonPressed(name: nameTextField.text ?? "", userName: userNameTextField.text ?? "")
     }
     
     private func setupView() {
@@ -110,13 +103,17 @@ final class RegisterView: UIView {
     }
     
     private func addSubViews() {
-        addSubview(logo)
-        addSubview(phoneTextField)
-        addSubview(registerButton)
-        addSubview(textFieldStackView)
+        addSubviews(
+            logoImageView,
+            phoneTextField,
+            registerButton,
+            textFieldStackView
+        )
         
-        textFieldStackView.addArrangedSubview(nameTextField)
-        textFieldStackView.addArrangedSubview(userNameTextField)
+        textFieldStackView.addArrangedSubviews(
+            nameTextField,
+            userNameTextField
+        )
     }
     
     private func setupConstraints() {
@@ -126,14 +123,14 @@ final class RegisterView: UIView {
         let textFieldTopOffset: CGFloat = 16
         
         NSLayoutConstraint.activate([
-            logo.widthAnchor.constraint(equalToConstant: logoSize),
-            logo.heightAnchor.constraint(equalToConstant: logoSize),
-            logo.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
-            logo.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            logoImageView.widthAnchor.constraint(equalToConstant: logoSize),
+            logoImageView.heightAnchor.constraint(equalToConstant: logoSize),
+            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
+            logoImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
         
             phoneTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
             phoneTextField.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            phoneTextField.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: textFieldTopOffset),
+            phoneTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: textFieldTopOffset),
             
             nameTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
             userNameTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
@@ -147,5 +144,11 @@ final class RegisterView: UIView {
             registerButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
             registerButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -defaultOffset)
         ])
+    }
+}
+
+extension RegisterView {
+    func updatePhoneTextField(for number: String) {
+        phoneTextField.set(phoneNumber: number)
     }
 }

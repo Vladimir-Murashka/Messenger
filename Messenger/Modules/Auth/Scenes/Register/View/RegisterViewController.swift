@@ -22,6 +22,7 @@ final class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        output.viewDidLoad()
     }
     
     override func touchesBegan(
@@ -38,4 +39,8 @@ extension RegisterViewController: RegisterViewInput {
     func stopLoading() {}
 
     func showError() {}
+    
+    func updateTextField(for number: String) {
+        registerView.updatePhoneTextField(for: number)
+    }
 }
