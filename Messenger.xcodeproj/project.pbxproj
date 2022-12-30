@@ -26,6 +26,20 @@
 		224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09062958E540000D0CF4 /* ErrorDetail.swift */; };
 		22B46D71295DCF7500121A5C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D70295DCF7500121A5C /* UIView.swift */; };
 		22B46D73295DD15600121A5C /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D72295DD15600121A5C /* UIStackView.swift */; };
+		22B46D77295E351000121A5C /* ProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D76295E351000121A5C /* ProfileModule.swift */; };
+		22B46D79295E352100121A5C /* ProfileDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D78295E352100121A5C /* ProfileDIContainer.swift */; };
+		22B46D7B295E353100121A5C /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D7A295E353100121A5C /* ProfileCoordinator.swift */; };
+		22B46D84295E385B00121A5C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D83295E385B00121A5C /* ProfileViewController.swift */; };
+		22B46D86295E386D00121A5C /* ProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D85295E386D00121A5C /* ProfileViewInput.swift */; };
+		22B46D88295E388000121A5C /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D87295E388000121A5C /* ProfileViewOutput.swift */; };
+		22B46D8A295E388C00121A5C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D89295E388C00121A5C /* ProfileView.swift */; };
+		22B46D8C295E38A200121A5C /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D8B295E38A200121A5C /* ProfilePresenter.swift */; };
+		22B46D8E295E38B300121A5C /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D8D295E38B300121A5C /* ProfileInteractor.swift */; };
+		22B46D90295E38C400121A5C /* ProfileInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D8F295E38C400121A5C /* ProfileInteractorInput.swift */; };
+		22B46D92295E38D700121A5C /* ProfileInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D91295E38D700121A5C /* ProfileInteractorOutput.swift */; };
+		22B46D94295E38FF00121A5C /* ProfileRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D93295E38FF00121A5C /* ProfileRouterInput.swift */; };
+		22B46D96295E390D00121A5C /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D95295E390D00121A5C /* ProfileAssembly.swift */; };
+		22B46D9A295E3DFB00121A5C /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B46D99295E3DFB00121A5C /* GetUserResponse.swift */; };
 		22D1135F2959C0360094F2A6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1135E2959C0360094F2A6 /* AppCoordinator.swift */; };
 		22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113602959C06F0094F2A6 /* AppDIContainer.swift */; };
 		22D113642959C0FF0094F2A6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D113632959C0FF0094F2A6 /* Router.swift */; };
@@ -96,6 +110,20 @@
 		224B09062958E540000D0CF4 /* ErrorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetail.swift; sourceTree = "<group>"; };
 		22B46D70295DCF7500121A5C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		22B46D72295DD15600121A5C /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		22B46D76295E351000121A5C /* ProfileModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModule.swift; sourceTree = "<group>"; };
+		22B46D78295E352100121A5C /* ProfileDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDIContainer.swift; sourceTree = "<group>"; };
+		22B46D7A295E353100121A5C /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		22B46D83295E385B00121A5C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22B46D85295E386D00121A5C /* ProfileViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewInput.swift; sourceTree = "<group>"; };
+		22B46D87295E388000121A5C /* ProfileViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
+		22B46D89295E388C00121A5C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		22B46D8B295E38A200121A5C /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		22B46D8D295E38B300121A5C /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		22B46D8F295E38C400121A5C /* ProfileInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorInput.swift; sourceTree = "<group>"; };
+		22B46D91295E38D700121A5C /* ProfileInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorOutput.swift; sourceTree = "<group>"; };
+		22B46D93295E38FF00121A5C /* ProfileRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouterInput.swift; sourceTree = "<group>"; };
+		22B46D95295E390D00121A5C /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		22B46D99295E3DFB00121A5C /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
 		22D1135E2959C0360094F2A6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		22D113602959C06F0094F2A6 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		22D113632959C0FF0094F2A6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Messenger/Common/Models/Router.swift; sourceTree = SOURCE_ROOT; };
@@ -253,6 +281,7 @@
 				224B08F12958DE39000D0CF4 /* SendAuthCodeResponse.swift */,
 				22D113B32959E9B50094F2A6 /* CheckAuthCodeResponse.swift */,
 				22D113BD295A446B0094F2A6 /* RegisterResponse.swift */,
+				22B46D99295E3DFB00121A5C /* GetUserResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -276,6 +305,90 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		22B46D74295E34D600121A5C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D76295E351000121A5C /* ProfileModule.swift */,
+				22B46D78295E352100121A5C /* ProfileDIContainer.swift */,
+				22B46D7A295E353100121A5C /* ProfileCoordinator.swift */,
+				22B46D75295E34FE00121A5C /* Scenes */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		22B46D75295E34FE00121A5C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D7D295E354B00121A5C /* Profile */,
+				22B46D7C295E354100121A5C /* EditProfile */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		22B46D7C295E354100121A5C /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		22B46D7D295E354B00121A5C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D82295E383300121A5C /* Assembly */,
+				22B46D81295E382E00121A5C /* Router */,
+				22B46D80295E382700121A5C /* Interactor */,
+				22B46D7F295E381F00121A5C /* Presenter */,
+				22B46D7E295E381800121A5C /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		22B46D7E295E381800121A5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D83295E385B00121A5C /* ProfileViewController.swift */,
+				22B46D85295E386D00121A5C /* ProfileViewInput.swift */,
+				22B46D87295E388000121A5C /* ProfileViewOutput.swift */,
+				22B46D89295E388C00121A5C /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22B46D7F295E381F00121A5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D8B295E38A200121A5C /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		22B46D80295E382700121A5C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D8D295E38B300121A5C /* ProfileInteractor.swift */,
+				22B46D8F295E38C400121A5C /* ProfileInteractorInput.swift */,
+				22B46D91295E38D700121A5C /* ProfileInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		22B46D81295E382E00121A5C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D93295E38FF00121A5C /* ProfileRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		22B46D82295E383300121A5C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				22B46D95295E390D00121A5C /* ProfileAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		22D113622959C0ED0094F2A6 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				22D113762959DC9F0094F2A6 /* Auth */,
+				22B46D74295E34D600121A5C /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -633,11 +747,15 @@
 				22D113A42959E6410094F2A6 /* CheckCodeVIew.swift in Sources */,
 				22B46D73295DD15600121A5C /* UIStackView.swift in Sources */,
 				224B09002958E400000D0CF4 /* DecoderManager.swift in Sources */,
+				22B46D90295E38C400121A5C /* ProfileInteractorInput.swift in Sources */,
 				224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */,
 				22D113A02959E61D0094F2A6 /* CheckCodeViewInput.swift in Sources */,
+				22B46D86295E386D00121A5C /* ProfileViewInput.swift in Sources */,
 				22D113C8295A46220094F2A6 /* RegisterInteractorOutput.swift in Sources */,
+				22B46D7B295E353100121A5C /* ProfileCoordinator.swift in Sources */,
 				22D113752959DC700094F2A6 /* AuthDIContainer.swift in Sources */,
 				22D113902959DEB00094F2A6 /* AuthViewController.swift in Sources */,
+				22B46D92295E38D700121A5C /* ProfileInteractorOutput.swift in Sources */,
 				224B08F62958DEA5000D0CF4 /* Moya.Task.swift in Sources */,
 				22D113B22959E9A10094F2A6 /* CheckAuthCodeRequest.swift in Sources */,
 				22D113A22959E6340094F2A6 /* CheckCodeViewOutput.swift in Sources */,
@@ -648,6 +766,7 @@
 				22D113D0295A494E0094F2A6 /* RegisterViewOutput.swift in Sources */,
 				22D113782959DCC60094F2A6 /* AuthCoordinator.swift in Sources */,
 				22D113BC295A44520094F2A6 /* RegisterRequest.swift in Sources */,
+				22B46D9A295E3DFB00121A5C /* GetUserResponse.swift in Sources */,
 				22D113B42959E9B50094F2A6 /* CheckAuthCodeResponse.swift in Sources */,
 				22D113642959C0FF0094F2A6 /* Router.swift in Sources */,
 				22D113A82959E6A40094F2A6 /* CheckCodeInteractor.swift in Sources */,
@@ -659,8 +778,10 @@
 				22D113CA295A482B0094F2A6 /* RegisterPresenter.swift in Sources */,
 				22D113C4295A45F80094F2A6 /* RegisterInteractor.swift in Sources */,
 				224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */,
+				22B46D79295E352100121A5C /* ProfileDIContainer.swift in Sources */,
 				22D113C0295A456C0094F2A6 /* RegisterAssembly.swift in Sources */,
 				224B08F02958DE27000D0CF4 /* SendAuthCodeRequest.swift in Sources */,
+				22B46D88295E388000121A5C /* ProfileViewOutput.swift in Sources */,
 				224B08FC2958E39D000D0CF4 /* AuthPlugin.swift in Sources */,
 				22D113A62959E6930094F2A6 /* CheckCodePresenter.swift in Sources */,
 				22D113AE2959E6FD0094F2A6 /* CheckCodeRouterInput.swift in Sources */,
@@ -669,11 +790,14 @@
 				224B08EE2958DDFE000D0CF4 /* Users.swift in Sources */,
 				22D113862959DE3C0094F2A6 /* AuthInteractor.swift in Sources */,
 				22D113962959DED30094F2A6 /* AuthView.swift in Sources */,
+				22B46D77295E351000121A5C /* ProfileModule.swift in Sources */,
 				22B46D71295DCF7500121A5C /* UIView.swift in Sources */,
+				22B46D8C295E38A200121A5C /* ProfilePresenter.swift in Sources */,
 				22D113AA2959E6BD0094F2A6 /* CheckCodeInteractorInput.swift in Sources */,
 				22D113C2295A45CA0094F2A6 /* RegisterRouterInput.swift in Sources */,
 				22D113612959C06F0094F2A6 /* AppDIContainer.swift in Sources */,
 				224B08D52958C341000D0CF4 /* SceneDelegate.swift in Sources */,
+				22B46D94295E38FF00121A5C /* ProfileRouterInput.swift in Sources */,
 				22D1139E2959E5ED0094F2A6 /* CheckCodeViewController.swift in Sources */,
 				224B09022958E431000D0CF4 /* APIManager.swift in Sources */,
 				22D1136E2959C1620094F2A6 /* NavigationRouter.swift in Sources */,
@@ -683,12 +807,16 @@
 				224B08F42958DE77000D0CF4 /* AuthorizedTargetType.swift in Sources */,
 				224B08F82958DEE3000D0CF4 /* Encodable.swift in Sources */,
 				224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */,
+				22B46D8A295E388C00121A5C /* ProfileView.swift in Sources */,
+				22B46D8E295E38B300121A5C /* ProfileInteractor.swift in Sources */,
 				22D113D2295A495B0094F2A6 /* RegisterView.swift in Sources */,
 				22D113CC295A49310094F2A6 /* RegisterViewController.swift in Sources */,
 				22D113732959DC5A0094F2A6 /* AuthModule.swift in Sources */,
 				22D113BE295A446C0094F2A6 /* RegisterResponse.swift in Sources */,
+				22B46D84295E385B00121A5C /* ProfileViewController.swift in Sources */,
 				22D1136C2959C1500094F2A6 /* Coordinator.swift in Sources */,
 				22D113822959DDF30094F2A6 /* AuthAssembly.swift in Sources */,
+				22B46D96295E390D00121A5C /* ProfileAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
