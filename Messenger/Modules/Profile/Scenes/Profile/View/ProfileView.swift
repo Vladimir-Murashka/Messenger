@@ -13,20 +13,152 @@ final class ProfileView: UIView {
 
     // MARK: - Private properties
     
-    private let logoImageView: UIImageView = {
+    private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
+        imageView.layer.cornerRadius = 75
+        imageView.layer.masksToBounds = true
+        imageView.backgroundColor = .cyan
         return imageView
     }()
 
-    private lazy var phoneTextField: FPNTextField = {
+    private let phoneTextField: FPNTextField = {
         let textField = FPNTextField()
         textField.font = UIFont(name: "Roboto", size: 20)
         textField.setFlag(key: .RU)
         textField.set(phoneNumber: "985 433-33-13")
         return textField
     }()
-
+    
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = "Максим"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let userSeparatorLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = ":"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let userNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = "Hologen"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let userStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
+    private let cityLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = "Город"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let citySeparatorLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = ":"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let nameCityLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = "Краснодар"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let cityStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
+    private let birthdayLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 18)
+        label.text = "Дата рождения"
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let birthdaySeparatorLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = ":"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let birthdayDateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = "13.02.1991"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let birthdayStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
+    private let zodiacSingLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 18)
+        label.text = "Знак зодиака"
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let zodiacSingSeparatorLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.text = ":"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let zodiacSingImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "logo")
+        imageView.layer.cornerRadius = 25
+        imageView.layer.masksToBounds = true
+        imageView.backgroundColor = .cyan
+        return imageView
+    }()
+    
+    private let zodiacStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
+    private let commonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     // MARK: - Init
 
     override init(frame: CGRect) {
@@ -48,8 +180,40 @@ final class ProfileView: UIView {
     
     private func addSubViews() {
         addSubviews(
-            logoImageView,
-            phoneTextField
+            avatarImageView,
+            phoneTextField,
+            commonStackView
+        )
+        
+        userStackView.addArrangedSubviews(
+            nameLabel,
+            userSeparatorLabel,
+            userNameLabel
+        )
+        
+        cityStackView.addArrangedSubviews(
+            cityLabel,
+            citySeparatorLabel,
+            nameCityLabel
+        )
+        
+        birthdayStackView.addArrangedSubviews(
+            birthdayLabel,
+            birthdaySeparatorLabel,
+            birthdayDateLabel
+        )
+        
+        zodiacStackView.addArrangedSubviews(
+            zodiacSingLabel,
+            zodiacSingSeparatorLabel,
+            zodiacSingImageView
+        )
+        
+        commonStackView.addArrangedSubviews(
+            userStackView,
+            cityStackView,
+            birthdayStackView,
+            zodiacStackView
         )
     }
     
@@ -57,17 +221,29 @@ final class ProfileView: UIView {
         let logoSize: CGFloat = 150
         let defaultOffset: CGFloat = 16
         let defaultHeigth: CGFloat = 50
-        let phoneTextFieldTopOffset: CGFloat = 64
+        let defaultWidth: CGFloat = 50
+        let phoneTextFieldTopOffset: CGFloat = 8
         
         NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(equalToConstant: logoSize),
-            logoImageView.heightAnchor.constraint(equalToConstant: logoSize),
-            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
-            logoImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            avatarImageView.widthAnchor.constraint(equalToConstant: logoSize),
+            avatarImageView.heightAnchor.constraint(equalToConstant: logoSize),
+            avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            avatarImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             
             phoneTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
             phoneTextField.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            phoneTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: phoneTextFieldTopOffset)
+            phoneTextField.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: phoneTextFieldTopOffset),
+            
+            userStackView.heightAnchor.constraint(equalToConstant: defaultHeigth),
+            cityStackView.heightAnchor.constraint(equalToConstant: defaultHeigth),
+            birthdayStackView.heightAnchor.constraint(equalToConstant: defaultHeigth),
+            
+            zodiacSingImageView.heightAnchor.constraint(equalToConstant: defaultHeigth),
+            zodiacSingImageView.widthAnchor.constraint(equalToConstant: defaultWidth),
+            
+            commonStackView.topAnchor.constraint(equalTo: phoneTextField.bottomAnchor),
+            commonStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
+            commonStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset)
         ])
     }
 }
