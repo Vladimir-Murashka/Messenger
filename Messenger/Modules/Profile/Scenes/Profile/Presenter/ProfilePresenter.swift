@@ -17,10 +17,13 @@ final class ProfilePresenter {
 }
 
 extension ProfilePresenter: ProfileViewOutput {
-    func editProfileButtonPressed() {}
+    func editProfileButtonPressed() {
+        router.routeToEditProfile()
+    }
 }
 
 extension ProfilePresenter: ProfileInteractorOutput {
+    
     func didGetUserSuccessfully(response: SendAuthCodeResponse) {}
     
     func didGetUserFailure(error: Error) {}

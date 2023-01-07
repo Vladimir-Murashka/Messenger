@@ -16,3 +16,7 @@ final class ProfileInteractor {
         self.apiManager = apiManager
     }
 }
+
+extension ProfileInteractor: ProfileInteractorInput {
+    func fetchUserInfo() {}
+}

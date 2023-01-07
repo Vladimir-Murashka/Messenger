@@ -18,7 +18,7 @@ struct ProfileModule {
         self.diContainer = ProfileDIContainer(dependencies: dependencies)
     }
 
-    func makeAuthFlowCoordinator(
+    func makeProfileFlowCoordinator(
         router: Router
     ) -> CoordinatorOutput {
         let coordinator = ProfileFlowCoordinator(

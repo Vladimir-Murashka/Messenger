@@ -5,4 +5,6 @@
 //  Created by Swift Learning on 30.12.2022.
 //
 
-protocol ProfileInteractorInput: AnyObject {}
+protocol ProfileInteractorInput: AnyObject {
+    func fetchUserInfo()
+}

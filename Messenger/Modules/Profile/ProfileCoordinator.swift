@@ -23,6 +23,20 @@ final class ProfileFlowCoordinator: BaseCoordinator & CoordinatorOutput {
         self.diContainer = diContainer
     }
 
-    override func start() {}
+    override func start() {
+        let profileViewController = diContainer.makeProfileViewController(router: self)
+
+        router.setRoot(profileViewController, animated: true)
+    }
 }
+
+extension ProfileFlowCoordinator: ProfileRouterInput {
+    func routeToEditProfile() {
+        let editProfileViewController = diContainer.makeEditProfileViewController(router: self)
+        
+        router.push(editProfileViewController)
+    }
+}
+
+extension ProfileFlowCoordinator: EditProfileRouterInput {}
 

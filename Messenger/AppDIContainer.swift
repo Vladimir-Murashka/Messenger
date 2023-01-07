@@ -28,4 +28,10 @@ extension AppDIContainer {
 
         return AuthModule(dependencies: dependencies).makeAuthFlowCoordinator(router: router)
     }
+    
+    func makeProfileFlowCoordinator(router: Router) -> CoordinatorOutput {
+        let dependencies = ProfileModuleDependencies(apiManager: apiManager)
+
+        return ProfileModule(dependencies: dependencies).makeProfileFlowCoordinator(router: router)
+    }
 }

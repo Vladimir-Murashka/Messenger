@@ -14,12 +14,24 @@ final class ProfileDIContainer {
         self.dependencies = dependencies
     }
 
-    func makeProfileViewController(router: AuthRouterInput) -> UIViewController {
-        return UIViewController()
+    func makeProfileViewController(router: ProfileRouterInput) -> UIViewController {
+        let dependencies = ProfileDependencies(
+            router: router,
+            apiManager: dependencies.apiManager
+        )
+        let assembly = ProfileAssembly(dependencies: dependencies)
+
+        return assembly.build()
     }
     
-    func makeEditProfileViewController(router: AuthRouterInput) -> UIViewController {
-        return UIViewController()
+    func makeEditProfileViewController(router: EditProfileRouterInput) -> UIViewController {
+        let dependencies = EditProfileDependencies(
+            router: router,
+            apiManager: dependencies.apiManager
+        )
+        let assembly = EditProfileAssembly(dependencies: dependencies)
+
+        return assembly.build()
     }
 }
 

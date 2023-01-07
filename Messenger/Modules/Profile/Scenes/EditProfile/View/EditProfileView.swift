@@ -1,23 +1,17 @@
 //
-//  ProfileView.swift
+//  EditProfileView.swift
 //  Messenger
 //
-//  Created by Swift Learning on 30.12.2022.
+//  Created by Swift Learning on 07.01.2023.
 //
 
 import UIKit
 import FlagPhoneNumber
 
-final class ProfileView: UIView {
-    var output: ProfileViewOutput!
+final class EditProfileView: UIView {
+    var output: EditProfileViewOutput!
 
     // MARK: - Private properties
-    
-    private let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "logo")
-        return imageView
-    }()
 
     private lazy var phoneTextField: FPNTextField = {
         let textField = FPNTextField()
@@ -48,27 +42,18 @@ final class ProfileView: UIView {
     
     private func addSubViews() {
         addSubviews(
-            logoImageView,
             phoneTextField
         )
     }
     
     private func setupConstraints() {
-        let logoSize: CGFloat = 150
         let defaultOffset: CGFloat = 16
         let defaultHeigth: CGFloat = 50
-        let phoneTextFieldTopOffset: CGFloat = 64
         
         NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(equalToConstant: logoSize),
-            logoImageView.heightAnchor.constraint(equalToConstant: logoSize),
-            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset),
-            logoImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            
             phoneTextField.heightAnchor.constraint(equalToConstant: defaultHeigth),
             phoneTextField.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            phoneTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: phoneTextFieldTopOffset)
+            phoneTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: defaultOffset)
         ])
     }
 }
-

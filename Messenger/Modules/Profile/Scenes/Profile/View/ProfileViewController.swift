@@ -22,7 +22,8 @@ final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.isNavigationBarHidden = false
+        addEditButton()
     }
     
     override func touchesBegan(
@@ -40,4 +41,18 @@ extension ProfileViewController: ProfileViewInput {
 
     func showError() {}
 
+}
+
+private extension ProfileViewController {
+    private func addEditButton() {
+        let editBarButton = UIBarButtonItem(title: "Изм.", style: .plain, target: self, action: #selector(addEditButtonPressed))
+        self.navigationItem.rightBarButtonItem = editBarButton
+    }
+    
+    @objc
+    func addEditButtonPressed() {
+        print(#function)
+        output.editProfileButtonPressed()
+    }
+    
 }

@@ -29,7 +29,7 @@ struct ProfileAssembly {
         let interactor = ProfileInteractor(apiManager: dependencies.apiManager)
         interactor.output = presenter
 
-        presenter.interactor = interactor as? any ProfileInteractorInput
+        presenter.interactor = interactor
         viewController.output = presenter
 
         return viewController
