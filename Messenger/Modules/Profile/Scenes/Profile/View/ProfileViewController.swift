@@ -51,8 +51,6 @@ private extension ProfileViewController {
     
     @objc
     func addEditButtonPressed() {
-        print(#function)
         output.editProfileButtonPressed()
     }
-    
 }
