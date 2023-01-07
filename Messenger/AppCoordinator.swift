@@ -26,7 +26,7 @@ final class AppCoordinator: BaseCoordinator {
 
     override func start() {
         window.makeKeyAndVisible()
-        startAuthFlowCoordinator()
+        startProfileFlowCoordinator()
     }
 
     private func startAuthFlowCoordinator() {
@@ -36,7 +36,7 @@ final class AppCoordinator: BaseCoordinator {
 
         let authCoordinator = diContainer.makeAuthFlowCoordinator(router: newRouter)
         authCoordinator.onFinish = { [weak self] in
-            self?.startMainFlowCoordinator()
+            self?.startAuthFlowCoordinator()
         }
         addChild(authCoordinator)
 
@@ -53,6 +53,28 @@ final class AppCoordinator: BaseCoordinator {
         )
     }
 
-    private func startMainFlowCoordinator() {}
+    private func startProfileFlowCoordinator() {
+        let navigationController = UINavigationController()
+        let newRouter = NavigationRouter(navigationController: navigationController)
+        self.router = newRouter
+
+        let authCoordinator = diContainer.makeProfileFlowCoordinator(router: newRouter)
+        authCoordinator.onFinish = { [weak self] in
+            self?.startProfileFlowCoordinator()
+        }
+        addChild(authCoordinator)
+
+        authCoordinator.start()
+
+        window.rootViewController = navigationController
+
+        UIView.transition(
+            with: window,
+            duration: 0.3,
+            options: .transitionCrossDissolve,
+            animations: {},
+            completion: nil
+        )
+    }
 }
 
