@@ -27,6 +27,7 @@ final class ProfileView: UIView {
         textField.font = UIFont(name: "Roboto", size: 20)
         textField.setFlag(key: .RU)
         textField.set(phoneNumber: "985 433-33-13")
+        textField.isUserInteractionEnabled = false
         return textField
     }()
     
@@ -159,6 +160,19 @@ final class ProfileView: UIView {
         return stackView
     }()
     
+    private let aboutMeLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Roboto", size: 20)
+        label.textAlignment = .center
+        label.text = "Что-то о себе"
+        label.backgroundColor = .systemGray6
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.layer.borderWidth = 1
+        label.layer.borderColor = UIColor.systemTeal.cgColor
+        return label
+    }()
+    
     // MARK: - Init
 
     override init(frame: CGRect) {
@@ -182,7 +196,8 @@ final class ProfileView: UIView {
         addSubviews(
             avatarImageView,
             phoneTextField,
-            commonStackView
+            commonStackView,
+            aboutMeLabel
         )
         
         userStackView.addArrangedSubviews(
@@ -218,15 +233,15 @@ final class ProfileView: UIView {
     }
     
     private func setupConstraints() {
-        let logoSize: CGFloat = 150
+        let avatarImagiViewSize: CGFloat = 150
         let defaultOffset: CGFloat = 16
         let defaultHeigth: CGFloat = 50
         let defaultWidth: CGFloat = 50
         let phoneTextFieldTopOffset: CGFloat = 8
         
         NSLayoutConstraint.activate([
-            avatarImageView.widthAnchor.constraint(equalToConstant: logoSize),
-            avatarImageView.heightAnchor.constraint(equalToConstant: logoSize),
+            avatarImageView.widthAnchor.constraint(equalToConstant: avatarImagiViewSize),
+            avatarImageView.heightAnchor.constraint(equalToConstant: avatarImagiViewSize),
             avatarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             avatarImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             
@@ -243,7 +258,12 @@ final class ProfileView: UIView {
             
             commonStackView.topAnchor.constraint(equalTo: phoneTextField.bottomAnchor),
             commonStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
-            commonStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset)
+            commonStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
+            
+            aboutMeLabel.topAnchor.constraint(equalTo: commonStackView.bottomAnchor, constant: defaultOffset),
+            aboutMeLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: defaultOffset),
+            aboutMeLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -defaultOffset),
+            aboutMeLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -defaultOffset)
         ])
     }
 }
