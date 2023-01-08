@@ -22,6 +22,7 @@ final class EditProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBarButtonItems()
         
     }
     
@@ -40,5 +41,25 @@ extension EditProfileViewController: EditProfileViewInput {
 
     func showError() {}
 
+}
+
+private extension EditProfileViewController {
+    private func addBarButtonItems() {
+        let cancelBarButton = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(сanselButtonPressed))
+        self.navigationItem.leftBarButtonItem = cancelBarButton
+        
+        let saveBarButton = UIBarButtonItem(title: "Готово", style: .plain, target: self, action: #selector(saveButtonPressed))
+        self.navigationItem.rightBarButtonItem = saveBarButton
+    }
+    
+    @objc
+    func сanselButtonPressed() {
+        print(#function)
+    }
+    
+    @objc
+    func saveButtonPressed() {
+        print(#function)
+    }
 }
 
