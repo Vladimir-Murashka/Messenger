@@ -5,6 +5,8 @@
 //  Created by Swift Learning on 30.12.2022.
 //
 
+import Foundation
+
 final class ProfilePresenter {
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
@@ -12,11 +14,18 @@ final class ProfilePresenter {
     
     private var phone: String = ""
     private var phoneForTextFeild: String = ""
-
+    private var dateBirthday = "1991.02.13"
+    
     init() {}
 }
 
 extension ProfilePresenter: ProfileViewOutput {
+    func viewDidLoad() {
+        let date = dateBirthday.toDate(.isoDate) ?? Date()
+        let zodiacSingImageName = getZodiacSign(date)
+        view.updateZodiacSingImage(name: zodiacSingImageName)
+    }
+    
     func editProfileButtonPressed() {
         router.routeToEditProfile()
     }
@@ -29,3 +38,4 @@ extension ProfilePresenter: ProfileInteractorOutput {
     func didGetUserFailure(error: Error) {}
 }
 
+extension ProfilePresenter: ZodiacSingProtocol {}

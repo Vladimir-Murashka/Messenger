@@ -18,6 +18,9 @@
 		223CC55C2969B69A008D3F07 /* EditProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CC55B2969B69A008D3F07 /* EditProfileViewOutput.swift */; };
 		223CC55E2969B6A4008D3F07 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CC55D2969B6A4008D3F07 /* EditProfileView.swift */; };
 		223CC5602969C01A008D3F07 /* PutUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CC55F2969C01A008D3F07 /* PutUserInfo.swift */; };
+		224798C3296C4AAA0065521C /* ZodiacSingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224798C2296C4AA90065521C /* ZodiacSingProtocol.swift */; };
+		224798C5296C505D0065521C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224798C4296C505D0065521C /* String.swift */; };
+		224798C7296C57140065521C /* DecoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224798C6296C57140065521C /* DecoderManager.swift */; };
 		224B08D32958C341000D0CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08D22958C341000D0CF4 /* AppDelegate.swift */; };
 		224B08D52958C341000D0CF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08D42958C341000D0CF4 /* SceneDelegate.swift */; };
 		224B08DC2958C343000D0CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224B08DB2958C343000D0CF4 /* Assets.xcassets */; };
@@ -31,7 +34,6 @@
 		224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08F92958E374000D0CF4 /* NetworkManager.swift */; };
 		224B08FC2958E39D000D0CF4 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FB2958E39D000D0CF4 /* AuthPlugin.swift */; };
 		224B08FE2958E3D5000D0CF4 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FD2958E3D5000D0CF4 /* KeychainManager.swift */; };
-		224B09002958E400000D0CF4 /* DecoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B08FF2958E400000D0CF4 /* DecoderManager.swift */; };
 		224B09022958E431000D0CF4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09012958E431000D0CF4 /* APIManager.swift */; };
 		224B09052958E520000D0CF4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09042958E520000D0CF4 /* ErrorResponse.swift */; };
 		224B09072958E540000D0CF4 /* ErrorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B09062958E540000D0CF4 /* ErrorDetail.swift */; };
@@ -111,6 +113,9 @@
 		223CC55B2969B69A008D3F07 /* EditProfileViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewOutput.swift; sourceTree = "<group>"; };
 		223CC55D2969B6A4008D3F07 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		223CC55F2969C01A008D3F07 /* PutUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutUserInfo.swift; sourceTree = "<group>"; };
+		224798C2296C4AA90065521C /* ZodiacSingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacSingProtocol.swift; sourceTree = "<group>"; };
+		224798C4296C505D0065521C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		224798C6296C57140065521C /* DecoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderManager.swift; sourceTree = "<group>"; };
 		224B08CF2958C341000D0CF4 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		224B08D22958C341000D0CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		224B08D42958C341000D0CF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +131,6 @@
 		224B08F92958E374000D0CF4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		224B08FB2958E39D000D0CF4 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		224B08FD2958E3D5000D0CF4 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
-		224B08FF2958E400000D0CF4 /* DecoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DecoderManager.swift; path = ../../../../../../Downloads/DecoderManager.swift; sourceTree = "<group>"; };
 		224B09012958E431000D0CF4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		224B09042958E520000D0CF4 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		224B09062958E540000D0CF4 /* ErrorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetail.swift; sourceTree = "<group>"; };
@@ -253,6 +257,14 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		224798C1296C4A8D0065521C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				224798C2296C4AA90065521C /* ZodiacSingProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		224B08C62958C340000D0CF4 = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +318,7 @@
 				224B08F52958DEA5000D0CF4 /* Moya.Task.swift */,
 				22B46D70295DCF7500121A5C /* UIView.swift */,
 				22B46D72295DD15600121A5C /* UIStackView.swift */,
+				224798C4296C505D0065521C /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +326,7 @@
 		224B08E82958DD8C000D0CF4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				224798C1296C4A8D0065521C /* Protocols */,
 				22D113D7295B2CBF0094F2A6 /* Fonts */,
 				224B09032958E4FA000D0CF4 /* Error */,
 				224B08ED2958DDFE000D0CF4 /* Users.swift */,
@@ -335,9 +349,9 @@
 				224B08F92958E374000D0CF4 /* NetworkManager.swift */,
 				224B08FB2958E39D000D0CF4 /* AuthPlugin.swift */,
 				224B08F32958DE77000D0CF4 /* AuthorizedTargetType.swift */,
-				224B08FF2958E400000D0CF4 /* DecoderManager.swift */,
 				224B09012958E431000D0CF4 /* APIManager.swift */,
 				224B08FD2958E3D5000D0CF4 /* KeychainManager.swift */,
+				224798C6296C57140065521C /* DecoderManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -819,11 +833,11 @@
 				22D1138E2959DE9B0094F2A6 /* AuthPresenter.swift in Sources */,
 				22D113A42959E6410094F2A6 /* CheckCodeVIew.swift in Sources */,
 				22B46D73295DD15600121A5C /* UIStackView.swift in Sources */,
-				224B09002958E400000D0CF4 /* DecoderManager.swift in Sources */,
 				223CC5502969B60F008D3F07 /* EditProfileInteractorOutput.swift in Sources */,
 				22B46D90295E38C400121A5C /* ProfileInteractorInput.swift in Sources */,
 				224B08FA2958E374000D0CF4 /* NetworkManager.swift in Sources */,
 				22D113A02959E61D0094F2A6 /* CheckCodeViewInput.swift in Sources */,
+				224798C7296C57140065521C /* DecoderManager.swift in Sources */,
 				22B46D86295E386D00121A5C /* ProfileViewInput.swift in Sources */,
 				22D113C8295A46220094F2A6 /* RegisterInteractorOutput.swift in Sources */,
 				22B46D7B295E353100121A5C /* ProfileCoordinator.swift in Sources */,
@@ -835,6 +849,7 @@
 				223CC54C2969B50A008D3F07 /* EditProfileAssembly.swift in Sources */,
 				22D113B22959E9A10094F2A6 /* CheckAuthCodeRequest.swift in Sources */,
 				22D113A22959E6340094F2A6 /* CheckCodeViewOutput.swift in Sources */,
+				224798C3296C4AAA0065521C /* ZodiacSingProtocol.swift in Sources */,
 				22D113C6295A46100094F2A6 /* RegisterInteractorInput.swift in Sources */,
 				22D113922959DEBD0094F2A6 /* AuthViewInput.swift in Sources */,
 				224B08FE2958E3D5000D0CF4 /* KeychainManager.swift in Sources */,
@@ -892,6 +907,7 @@
 				22B46D8A295E388C00121A5C /* ProfileView.swift in Sources */,
 				22B46D8E295E38B300121A5C /* ProfileInteractor.swift in Sources */,
 				22D113D2295A495B0094F2A6 /* RegisterView.swift in Sources */,
+				224798C5296C505D0065521C /* String.swift in Sources */,
 				223CC54E2969B5DE008D3F07 /* EditProfileRouterInput.swift in Sources */,
 				22D113CC295A49310094F2A6 /* RegisterViewController.swift in Sources */,
 				223CC5562969B65C008D3F07 /* EditProfilePresenter.swift in Sources */,

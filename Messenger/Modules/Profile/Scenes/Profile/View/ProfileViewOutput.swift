@@ -7,4 +7,5 @@
 
 protocol ProfileViewOutput: AnyObject {
     func editProfileButtonPressed()
+    func viewDidLoad()
 }

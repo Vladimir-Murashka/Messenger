@@ -268,3 +268,8 @@ final class ProfileView: UIView {
     }
 }
 
+extension ProfileView {
+    func updateZodiacSingImage(_ name: String) {
+        zodiacSingImageView.image = UIImage(named: name)
+    }
+}

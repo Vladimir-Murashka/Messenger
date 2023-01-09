@@ -24,6 +24,7 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
         addEditButton()
+        output.viewDidLoad()
     }
     
     override func touchesBegan(
@@ -40,6 +41,10 @@ extension ProfileViewController: ProfileViewInput {
     func stopLoading() {}
 
     func showError() {}
+    
+    func updateZodiacSingImage(name: String) {
+        profileView.updateZodiacSingImage(name)
+    }
 
 }
 

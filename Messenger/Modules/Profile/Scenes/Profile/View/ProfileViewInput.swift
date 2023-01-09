@@ -9,4 +9,5 @@ protocol ProfileViewInput: AnyObject {
     func showError()
     func startLoading()
     func stopLoading()
+    func updateZodiacSingImage(name: String)
 }
